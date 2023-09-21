@@ -2,13 +2,13 @@
 
 ## what is this
 
-a prototype for a hardware/software solution to let recursers sign in using their door tags
+a prototype for a hardware/software solution to let recursers sign in using their door tags by [kevan](https://github.com/khollbach) and greg
 
 ## plan
 
 - [ ] greg will check at home if his flipper zero is able to read the HID rfid tag (most probably)
 - [ ] if so, greg will bring his flipper zero to the space on sep 22
-- [ ] [kevan](https://github.com/khollbach) and greg will do a quick sanity check - can the flipper zero read both of their tags, is the ID value unique for each? (or are they all programmed with the same recurse ID -- doubtful)
+- [ ] kevan and greg will do a quick sanity check - can the flipper zero read both of their tags, is the ID value unique for each? (or are they all programmed with the same recurse ID -- doubtful)
 - [ ] will we need to create a flipper app...? to read the tag? I think the flipper has a command-line serial port kind of thing to interface with it i.e. https://forum.flipper.net/t/cli-command-line-interface-examples/1874 ..? i.e. can we activate the flipper rfid reader not via its GUI...? otherwise create an app that reads tags and outputs their value over usb (and/or as a keyboard...? or serial port?)
 - [ ] assuming that we can read info from the flipper, we need a device - a raspi? - that receives the read tags and ... communicates with the recurse hubs visit api directly?
 - [ ] we'll need an oauth web app to let recursers scan their tag and associate their tag with themselves i.e. scan + pick a person. from that point on, we can store recurser person ID - tag ID and sign them any time in the future when they 'scan in'

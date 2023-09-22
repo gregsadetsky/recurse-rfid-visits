@@ -6,7 +6,8 @@ a prototype for a hardware/software solution to let recursers sign in using thei
 
 ## plan
 
-- [ ] greg will check at home if his flipper zero is able to read the HID rfid tag (most probably)
+- [X] greg will check at home if his flipper zero is able to read the HID rfid tag (most probably)
+  - confirmed! it's a standard H10301 HID format tag
 - [ ] if so, greg will bring his flipper zero to the space on sep 22
 - [ ] kevan and greg will do a quick sanity check - can the flipper zero read both of their tags, is the ID value unique for each? (or are they all programmed with the same recurse ID -- doubtful)
 - [ ] will we need to create a flipper app...? to read the tag? I think the flipper has a command-line serial port kind of thing to interface with it i.e. https://forum.flipper.net/t/cli-command-line-interface-examples/1874 ..? i.e. can we activate the flipper rfid reader not via its GUI...? otherwise create an app that reads tags and outputs their value over usb (and/or as a keyboard...? or serial port?)

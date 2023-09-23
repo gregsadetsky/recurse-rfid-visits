@@ -1,5 +1,41 @@
 # recurse-rfid-visits
 
+**TODO**: rename this as this project is "really" happening now with a bunch of hardware!!!!! maybe "octodoor"???
+
+---
+
+plan as of Sep 23:
+
+ordered from amazon and [chicago electronics distributor](https://chicagodist.com/) ((only place where I found a raspi 4 for sale -- thanks to [rpilocator](https://rpilocator.com/)!)):
+- [Raspberry Pi 4 Model B 1GB](https://chicagodist.com/products/raspberry-pi-4-model-b-1gb)
+- [raspi case](https://chicagodist.com/products/raspberry-pi-4-case-red-white)
+- [raspi power supply](https://chicagodist.com/products/raspberry-pi-4-psu-us-white)
+- [raspi sd card w/pre-installed OS ](https://chicagodist.com/products/raspberry-pi-official-noobs-microsd-card)
+- [octopus plush toy](https://www.amazon.com/gp/product/B07WC3YWBB/)
+- [usb-powered speakers with 3.5mm (1/8') jack](https://www.amazon.com/gp/product/B07D7TV5J3/)
+- [rfid usb reader](https://www.amazon.com/gp/product/B07TMNZPXK/) -- seemingly compatible with H10301 HID fobs i.e. RC door knobs!! (TBD)
+
+NEXT STEPS:
+- sanity checks:
+  - does the raspi boot/work? does basic wifi access work?
+  - does the rfid usb reader work? try with macos, then raspi
+    - I read something in the amzn comments about the rfid usb reader losing its settings on power off -- so hopefully can use its default mode i.e. "unconfigured"
+  - does raspi sound work via the audio jack? need any weird alsa config? what CLI command works to play audio? aplay? works with mp3s?
+
+then:
+- write minimal raspi script/service that continuously 1. reads rfid tags 2. pings some server (TBD / see below) 3. receives response as to what to do (acknowledge, play audio, etc.)
+
+then:
+- write/finish/polish setup/main server. basic features:
+  1. oauth sign up flow (sort of micro prototyped with flask/oauth) -->> sign in, scan badge ... 3 times?, then setup whether you want no sound/specific sound/community random sound
+  2. respond to octodoor door scans i.e. check if known rc person ID + have oauth token for them, log, play back configured sound, ping hub visit API
+
+where to host server? dokku + digital ocean...? render-ish?
+
+---
+---
+---
+
 ## what is this
 
 a prototype for a hardware/software solution to let recursers sign in using their door tags by [kevan](https://github.com/khollbach) and greg

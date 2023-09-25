@@ -32,6 +32,9 @@ then:
 
 where to host server? dokku + digital ocean...? render-ish?
 
+-----------
+for extremely later/not now/not me i.e. someone else can contrib: one of the Octopus leg could be a mic and button? To record new prompt
+
 ---
 ---
 ---

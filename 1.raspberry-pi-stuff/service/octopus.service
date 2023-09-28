@@ -1,0 +1,13 @@
+[Unit]
+Description=Octopus Recurse application website
+After=network.target
+
+[Service]
+User=root
+Enviroment="FLASK_SECRET_KEY=very very secrete"
+WorkingDirectory=/root
+ExecStart=hypercorn octopus:app --bind 0.0.0.0:5555
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

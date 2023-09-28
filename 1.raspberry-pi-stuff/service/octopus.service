@@ -6,7 +6,8 @@ After=network.target
 User=root
 Enviroment="FLASK_SECRET_KEY=very very secrete"
 WorkingDirectory=/root
-ExecStart=hypercorn octopus:app --bind 0.0.0.0:5555
+ExecStart=octoberry
+StandardInput=tty
 Restart=always
 
 [Install]

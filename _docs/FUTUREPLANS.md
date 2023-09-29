@@ -1,0 +1,2 @@
+- need to replicate setup for 4th & 5th floors? or just have one sign in octopus?? (that would be sad)
+- one of the Octopus leg could be a mic and button? To record new prompt??

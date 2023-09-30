@@ -10,6 +10,11 @@ a hardware/software things that lets people attending the [Recurse Center](https
 - web server responds with audio url to play and if the tag is already known, signs in the person using the hub visits api
 - raspi plays audio file over speakers mounted on/around octopus
 
+### where is the code
+
+- oauth web server "checkintopus" is [here](https://github.com/gregsadetsky/checkintopus)
+- hardware raspberry pi code will be in this repo
+
 ### TODO main tasks
 
 - write/finish/polish setup/main oauth (django?) server. basic features:

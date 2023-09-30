@@ -24,18 +24,16 @@ a hardware/software things that lets people attending the [Recurse Center](https
 - rename this as this project is really happening now!! maybe "octodoor"??
 - but it's not a door management system... octovisit? octohub...??? put it up to the community & see?
 
-### FWUP hardware to be received (as of sep 29 -- currently dealing with usps)
-
-- [Raspberry Pi 4 Model B 1GB](https://chicagodist.com/products/raspberry-pi-4-model-b-1gb)
-- [raspi case](https://chicagodist.com/products/raspberry-pi-4-case-red-white)
-- [raspi power supply](https://chicagodist.com/products/raspberry-pi-4-psu-us-white)
-- [raspi sd card w/pre-installed OS ](https://chicagodist.com/products/raspberry-pi-official-noobs-microsd-card)
-
 ### TODO hardware checks
 
 - sanity raspi tests upon receiving:
   - does the raspi boot/work? does basic wifi access work?
   - does raspi sound work via the audio jack? need any weird alsa config? what CLI command works to play audio? aplay? works with mp3s?
+
+### additional docs
+
+- [hardware parts](_docs/HARDWARE.md)
+- [rfid scanner manual](_docs/eh301---manual-came-with-device.pdf)
 
 ## reference
 
@@ -46,7 +44,7 @@ a hardware/software things that lets people attending the [Recurse Center](https
 
 ## misc
 
-- there's no way to check out - except by deleting your visit, as noted by Nick [here](https://recurse.zulipchat.com/#narrow/stream/398504-397-Bridge/topic/visits-bot!/near/384055535) -- we'll probably leave it as is i.e. this (just like V.A.L.E.T. and the ipad) will also be a check-in-only system
+- there's no way to check out from the hub - except by deleting your hub visit object, as noted by Nick [here](https://recurse.zulipchat.com/#narrow/stream/398504-397-Bridge/topic/visits-bot!/near/384055535). we'll probably leave it as is i.e. this (just like V.A.L.E.T. and the ipad) will be a check-in-only system. everyone gets checked out automatically at midnight by the 'Account Sync Bot'
 - [what _is_ rfid/nfc/etc.?](https://blog.flipper.net/rfid/)
 
 ## contributors

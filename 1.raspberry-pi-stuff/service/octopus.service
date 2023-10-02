@@ -4,10 +4,10 @@ After=network.target
 
 [Service]
 User=root
-Enviroment="FLASK_SECRET_KEY=very very secrete"
+EnvironmentFile=/root/.env
 WorkingDirectory=/root
 ExecStart=octoberry
-StandardInput=tty
+StandardOutput=journal
 Restart=always
 
 [Install]

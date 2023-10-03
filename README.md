@@ -1,19 +1,19 @@
 ## what is this
 
-a hardware/software things that lets people attending the [Recurse Center](https://www.recurse.com/) to sign in using their door fob
+a hardware & software project that lets people attending the [Recurse Center](https://www.recurse.com/) to sign in using their door fob
 
 ## how does it work
 
-- rfid reader mounted on/around octopus
-- rfid reader sends door tag id over usb to raspi
-- raspi pings oauth/main web server
-- web server responds with audio url to play and if the tag is already known, signs in the person using the hub visits api
-- raspi plays audio file over speakers mounted on/around octopus
+- an rfid reader is mounted on a plush octopus
+- the rfid reader sends the door tag id over usb to a raspi
+- the raspi pings the main web server (see source code [here](https://github.com/gregsadetsky/checkintopus))
+- the web server responds with audio url(s) to play back. if the door tag is already known, the server signs in the person using the [hub visits api](https://github.com/recursecenter/wiki/wiki/Recurse-Center-API#hub-visits).
+- the raspi plays the audio file(s) over speakers mounted on the plush octopus
 
 ### where is the code
 
-- oauth web server "checkintopus" is [here](https://github.com/gregsadetsky/checkintopus)
-- hardware raspberry pi code will be in this repo
+- the oauth/web/UI server is [here](https://github.com/gregsadetsky/checkintopus)
+- the hardware raspberry pi code is in this repo
 
 ## Installation
 
@@ -21,43 +21,30 @@ a hardware/software things that lets people attending the [Recurse Center](https
 1. ssh to it and clone this repo
 1. `sudo ./install.sh`
 1. in install.sh there will be a prompt asking you from the API access token - put it in
-    1. in case you configured this key already you can just press [ENTER] and skip this step
+   1. in case you configured this key already you can just press [ENTER] and skip this step
 1. ???
 1. profit
 
 ### Installation notes
+
 be aware that everything runs without a virtualenv and with root permissions
+
 #### why root?
+
 keyboard library requires us to use root in order to read from /dev/input
 
 #### why without venv?
+
 because we install here a python and launch it from a service it will be harder to do it when there is a virtualenv
 
 #### how to overcome these problems in the future?
+
 dockerize it. it will solve both problems
 don't forget to pass the relevant device to the container
 
-## TODOs
+### TODO rename project/repos
 
-### TODO main tasks
-
-- write/finish/polish setup/main oauth (django?) server. basic features:
-
-  1. oauth sign up flow (sort of micro prototyped with flask/oauth) -->> sign in, scan badge ... 3 times?, then setup whether you want no sound/specific sound/community random sound
-  2. respond to octodoor door scans i.e. check if known rc person ID + have oauth token for them, log, play back configured sound, ping hub visit API
-
-- host server - where? dokku + digital ocean...? render-ish?
-
-### TODO rename project/repo
-
-- rename this as this project is really happening now!! maybe "octodoor"??
-- but it's not a door management system... octovisit? octohub...??? put it up to the community & see?
-
-### TODO hardware checks
-
-- sanity raspi tests upon receiving:
-  - does the raspi boot/work? does basic wifi access work?
-  - does raspi sound work via the audio jack? need any weird alsa config? what CLI command works to play audio? aplay? works with mp3s?
+- based on [poll results](https://recurse.zulipchat.com/#narrow/stream/19042-.F0.9F.A7.91.E2.80.8D.F0.9F.92.BB-current-batches/topic/naming.20suggestion/near/394473437) + randomness
 
 ### additional docs
 

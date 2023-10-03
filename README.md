@@ -53,7 +53,7 @@ don't forget to pass the relevant device to the container
 
 ## reference
 
-- https://github.com/RodEsp/V.A.L.E.T. -- uses wifi/fixed device MAC addresses to detect people in the space and auto sign them in
+- [V.A.L.E.T.](https://github.com/RodEsp/V.A.L.E.T.) -- uses wifi/fixed device MAC addresses to detect people in the space and auto sign them in
 - [launch message re VALET](https://recurse.zulipchat.com/#narrow/stream/398504-397-Bridge/topic/V.2EA.2EL.2EE.2ET.2E/near/388175215)
 - [info on the visits bot](https://recurse.zulipchat.com/#narrow/stream/398504-397-Bridge/topic/visits-bot!)
 - [hub visits API](https://github.com/recursecenter/wiki/wiki/Recurse-Center-API#hub-visits) -- we'll use this to create a visit and to let people sign in using oauth so that we can associate their tag with them

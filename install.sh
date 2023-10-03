@@ -12,9 +12,12 @@ else
     echo API_TOKEN=$TOKEN > /root/.env
 fi
 
+sudo apt update && sudo apt install -y mpv
+# adjusting volume
+sudo amixer cset numid=1 100%
+
 cd octoberry
 pip install -e .
-sudo apt update && sudo apt install -y mpv
 
 cd ../service
 sudo ./install-service.sh

@@ -15,6 +15,10 @@ a hardware & software project that lets people attending the [Recurse Center](ht
 - the oauth/web/UI server is [here](https://github.com/gregsadetsky/checkintopus)
 - the hardware raspberry pi code is in this repo
 
+## Production environment
+We use a raspberry pi that is located at the hub and connected to the network via wifi
+the pi hostname, ssh credentials, API token and physical location can be found in [recurse wiki](https://github.com/recursecenter/wiki/wiki/Checkintopus)
+
 ## Installation
 
 1. install raspbian on a a raspberry pi
@@ -29,6 +33,14 @@ a hardware & software project that lets people attending the [Recurse Center](ht
 
 be aware that everything runs without a virtualenv and with root permissions
 
+### Update / deploy new code
+1. ssh to the running rpi
+1. go to the cloned repo
+1. `git pull`
+1. `sudo ./install.sh`
+1. skip the API access token input by pressing enter (unless you need to change it)
+1. that's it! -> the installation process reloads the code and restarts the service and therefore no more actions are needed
+
 #### why root?
 
 keyboard library requires us to use root in order to read from /dev/input
@@ -41,6 +53,16 @@ because we install here a python and launch it from a service it will be harder 
 
 dockerize it. it will solve both problems
 don't forget to pass the relevant device to the container
+
+## Troubleshooting
+1. check the service status:
+`service octopus status`
+1. restart the service in case something goes wrongs:
+`service octopus restart`
+1. read the logs easily
+`journalctl -u octopus.service`
+if you want to troubleshoot it in live you can use the -f flag to get changes:
+`journalctl -u octopus.service -f`
 
 ### TODO rename project/repos
 

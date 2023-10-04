@@ -56,13 +56,19 @@ don't forget to pass the relevant device to the container
 
 ## Troubleshooting
 1. check the service status:
-`service octopus status`
+`sudo service octopus status`
 1. restart the service in case something goes wrongs:
-`service octopus restart`
+`sudo service octopus restart`
 1. read the logs easily
 `journalctl -u octopus.service`
 if you want to troubleshoot it in live you can use the -f flag to get changes:
 `journalctl -u octopus.service -f`
+1. volume is too weak:
+reinstalling the service adjusts the volume, and this config should be preserved between reboot
+in case you are concerned with the volume not being on max you can reinstall the service by following the update process
+to check if it's 100% you can type the following command:
+`sudo amixer`
+one last thing to check - the physical knob at the speaker. you can adjust it if it's too strong / weak
 
 ### TODO rename project/repos
 

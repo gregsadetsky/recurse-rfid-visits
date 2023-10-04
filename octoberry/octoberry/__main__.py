@@ -8,7 +8,7 @@ from typing import Union, Tuple, List
 import logging
 import keyboard
 
-BACKEND_URL = "https://checkintopus.onrender.com"
+BACKEND_URL = "https://octopass.recurse.com"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -44,7 +44,7 @@ def _play_sound(sound_url, cached_sound_path: Union[None, str] = None) -> None:
         logger.info("Sound downloaded")
 
     logger.info("Playing sound...")
-    subprocess.call(f"/usr/bin/mpv {cached_sound_path}", shell=True)
+    subprocess.call(f"/usr/bin/mpv --volume=100 {cached_sound_path}", shell=True)
 
 
 def play_sounds(sound_urls: List[str]) -> None:

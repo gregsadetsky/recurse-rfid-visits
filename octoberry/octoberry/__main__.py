@@ -8,7 +8,7 @@ from typing import Union, Tuple, List
 import logging
 import keyboard
 
-BACKEND_URL = "https://64dd-2602-fb65-0-100-b072-c2e7-c8ba-2075.ngrok-free.app"
+BACKEND_URL = "https://checkintopus.onrender.com"
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)

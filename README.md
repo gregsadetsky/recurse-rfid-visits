@@ -16,8 +16,9 @@ a hardware & software project that lets people attending the [Recurse Center](ht
 - the hardware raspberry pi code is in this repo
 
 ## Production environment
+
 We use a raspberry pi that is located at the hub and connected to the network via wifi
-the pi hostname, ssh credentials, API token and physical location can be found in [recurse wiki](https://github.com/recursecenter/wiki/wiki/Checkintopus)
+the pi hostname, ssh credentials, API token and physical location can be found in [recurse wiki](https://github.com/recursecenter/wiki/wiki/Octopass)
 
 ## Installation
 
@@ -34,6 +35,7 @@ the pi hostname, ssh credentials, API token and physical location can be found i
 be aware that everything runs without a virtualenv and with root permissions
 
 ### Update / deploy new code
+
 1. ssh to the running rpi
 1. go to the cloned repo
 1. `git pull`
@@ -55,20 +57,21 @@ dockerize it. it will solve both problems
 don't forget to pass the relevant device to the container
 
 ## Troubleshooting
+
 1. check the service status:
-`sudo service octopus status`
+   `sudo service octopus status`
 1. restart the service in case something goes wrongs:
-`sudo service octopus restart`
+   `sudo service octopus restart`
 1. read the logs easily
-`journalctl -u octopus.service`
-if you want to troubleshoot it in live you can use the -f flag to get changes:
-`journalctl -u octopus.service -f`
+   `journalctl -u octopus.service`
+   if you want to troubleshoot it in live you can use the -f flag to get changes:
+   `journalctl -u octopus.service -f`
 1. volume is too weak:
-reinstalling the service adjusts the volume, and this config should be preserved between reboot
-in case you are concerned with the volume not being on max you can reinstall the service by following the update process
-to check if it's 100% you can type the following command:
-`sudo amixer`
-one last thing to check - the physical knob at the speaker. you can adjust it if it's too strong / weak
+   reinstalling the service adjusts the volume, and this config should be preserved between reboot
+   in case you are concerned with the volume not being on max you can reinstall the service by following the update process
+   to check if it's 100% you can type the following command:
+   `sudo amixer`
+   one last thing to check - the physical knob at the speaker. you can adjust it if it's too strong / weak
 
 ### TODO rename project/repos
 

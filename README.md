@@ -98,4 +98,6 @@ don't forget to pass the relevant device to the container
 
 ## contributors
 
-This project is brought to you by [Kevan](https://github.com/khollbach), [Itay](https://github.com/itay-sho) and [Greg](https://github.com/gregsadetsky).
+This project was made by <img src="https://eaafa.greg.technology/authors?Itay%20Shoshani,Greg%20Sadetsky" style="height:20px; width: 100px; vertical-align: middle" title="Itay Shoshani, Greg Sadetsky" />[^1]
+
+[^1]: [EAAFA](https://eaafa.greg.technology/)

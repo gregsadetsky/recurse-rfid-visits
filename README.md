@@ -1,6 +1,6 @@
 ## what is this
 
-a hardware & software project that lets people attending the [Recurse Center](https://www.recurse.com/) to sign in using their door fob
+a project that lets people attending the [Recurse Center](https://www.recurse.com/) to sign in by high fiving an octopus with their door fob
 
 <img width="400" alt="272737436-dd08b368-d220-4d54-8d68-a3a9fa558a7b" src="https://github.com/gregsadetsky/recurse-rfid-visits/assets/1017304/8628edb2-bc00-4f71-88c3-32a1d6b63db4">
 

@@ -1,4 +1,4 @@
-### notes on hardware
+### bill of materials
 
 - [octopus plush toy](https://www.amazon.com/gp/product/B07WC3YWBB/)
 - [usb-powered speakers with 3.5mm (1/8') jack](https://www.amazon.com/gp/product/B07D7TV5J3/)
@@ -8,7 +8,7 @@
 - [raspi power supply](https://chicagodist.com/products/raspberry-pi-4-psu-us-white)
 - [raspi sd card w/pre-installed OS ](https://chicagodist.com/products/raspberry-pi-official-noobs-microsd-card)
 
-### online orders
+### where to get this
 
 - [chicago electronics distributor](https://chicagodist.com/) for the raspi & accessories
 - amazon for the rest

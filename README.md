@@ -7,10 +7,10 @@ a project that lets people attending the [Recurse Center](https://www.recurse.co
 ## how does it work
 
 - an rfid reader is mounted on a plush octopus
-- the rfid reader sends the door tag id over usb to a raspi
+- the rfid reader sends the scanned door tag id over usb to a raspi
 - the raspi pings the main web server (see source code [here](https://github.com/gregsadetsky/checkintopus))
-- the web server responds with audio url(s) to play back. if the door tag is already known, the server signs in the person using the [hub visits api](https://github.com/recursecenter/wiki/wiki/Recurse-Center-API#hub-visits).
-- the raspi plays the audio file(s) over speakers mounted on the plush octopus
+- the web server responds with audio url(s) to play back. if the door tag is already known, the server signs the person in using the [hub visits api](https://github.com/recursecenter/wiki/wiki/Recurse-Center-API#hub-visits)
+- the raspi plays the audio file(s) over speakers mounted near the plush octopus
 
 ### where is the code
 
